@@ -1,4 +1,4 @@
-@echo off&color 70&mode con: cols=92 lines=30&title  Computer Management - Hiep Code - 2.0>nul
+@echo off&color 70&mode con: cols=92 lines=30&title  Microsoft Management - Hiep Code - 1.0>nul
 setlocal DisableDelayedExpansion
 set "batchPath=%~0"
 for %%k in (%0) do set batchName=%%~nk
@@ -34,34 +34,22 @@ echo              ^|                                                            
 echo              ^|      [3] Khoi phuc ban quyen                                   ^|
 echo              ^|                                                                ^|
 echo              ^|      [4] Quan li ban quyen                                     ^|
-echo              ^|                                                                ^|
-echo              ^|      [5] Sua loi "AutoCAD license is not valid"                ^|
 echo              ^|      ___________________________________________________       ^|
 echo              ^|                                                                ^|
 echo              ^|________________________________________________________________^|
 echo:
-choice /c:1234 /n /m ">_                      Nhap mot tuy chon [1, 2, 3, 4, 5] : "
-if errorlevel 5 goto FixAutoCAD
+choice /c:1234 /n /m ">_                          Nhap mot tuy chon [1, 2, 3, 4] : "
 if errorlevel 4 goto LicMgmt
-if errorlevel 3 goto CheckRestore                           
+if errorlevel 3 goto CheckRestore
 if errorlevel 2 goto Backup
 if errorlevel 1 goto MSAct
-:FixAutoCAD
-cls
-echo:
-echo 127.0.0.1 genuine-software.autodesk.com >> C:\Windows\System32\drivers\etc\hosts
-echo 127.0.0.1 genuine-software1.autodesk.com >> C:\Windows\System32\drivers\etc\hosts
-echo 127.0.0.1 genuine-software2.autodesk.com >> C:\Windows\System32\drivers\etc\hosts
-echo 127.0.0.1 ase-cnd-stg.autodesk.com >> C:\Windows\System32\drivers\etc\hosts
-echo 127.0.0.1 ase.autodesk.com >> C:\Windows\System32\drivers\etc\hosts
-echo ^> Da sua loi thanh cong...
 :MSAct
 cls
 echo:
-echo                          Computer Management
+echo                      MSM (Microsoft Management)
 echo ____________________________________________________________________________________________
 echo:
-echo                                          [R] Quay lai                                           
+echo                                          [R] Quay lai
 set /p key=" >_ Nhap key: "
 if %key% EQU R goto Home
 if %key% EQU r goto Home
@@ -109,10 +97,10 @@ goto PromptDepositOfflineConfirmationId
 :Notification
 echo ____________________________________________________________________________________________
 echo:
-echo                         Cam on ban da su dung script. Chuc ban mot ngay vui.
-echo                                     Lien he: bio.nguyenhiep.me
-echo                                     [R] Quay lai  [E] Thoat                                       
-choice /c:RE /n /m ">_ Nhap mot tuy chon (R/ E): "
+echo                         Cam on ban da su dung MSM. Chuc ban mot ngay vui.
+echo                                      bio.nguyenhiep.me
+echo                                     [R] Quay lai  [E] Thoat
+choice /c:RE /n /m ">_ Nhap mot tuy chon (R/E): "
 if errorlevel 2 exit
 if errorlevel 1 goto Home
 ::==============================================================================================
