@@ -1,7 +1,7 @@
 # Enable TLSv1.2 for compatibility with older clients
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
-$DownloadURL = 'https://raw.githubusercontent.com/nguyenhiep2805/MSM/main/Get-genuine-AutoCAD.cmd'
+$DownloadURL = 'https://raw.githubusercontent.com/nguyenhiep2805/Fix-your-AutoCAD-license-is-not-valid/main/Get-Genuine-AutoCAD.cmd'
 
 $FilePath = "$env:TEMP\IAS.cmd"
 
